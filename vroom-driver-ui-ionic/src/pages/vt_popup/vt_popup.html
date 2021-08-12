@@ -1,0 +1,24 @@
+<ion-content>
+    <div class="cloes_btn" text-end>
+        <ion-icon name="md-close" (click)="dismiss()"></ion-icon>
+    </div>
+
+    <ion-card>
+        <div class="img_box">
+            <img src="https://opuslabs.nyc3.digitaloceanspaces.com/AAFixItems/Other/popup_img_head.png">
+        </div>
+
+        <div class="text_box">
+            <h2>Stay in touch.</h2>
+            <p>Sta connected for Future <br>updates and new products.</p>
+        </div>
+        <ion-list no-lines [formGroup]="subscribeForm">
+
+            <ion-item>
+                <ion-input type="email" placeholder="Enter your email address" formControlName="email_Id"></ion-input>
+            </ion-item>
+
+            <button ion-button block (click)="onSubscribe()">Subscribe Now</button>
+        </ion-list>
+    </ion-card>
+</ion-content>

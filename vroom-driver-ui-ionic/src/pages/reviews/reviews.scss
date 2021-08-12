@@ -1,0 +1,48 @@
+page-reviews {
+    .card {
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid #dedede;
+        border-radius: 0;
+        .detail {
+            p {
+                margin-left: 60px;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .item {
+        margin-bottom: 0;
+        padding-top: 3px;
+        ion-avatar {
+            position: relative;
+        }
+        .item-inner {
+            border: none !important;
+            h2 {
+                margin: 2px 0;
+                font-size: 1.35rem;
+                font-weight: 600;
+                margin-bottom: 4px;
+            }
+            p {
+                color: $text-dark;
+                font-size: 1.3rem;
+                ion-icon {
+                    color: $text-light;
+                    font-size: 1.2rem;
+                    margin-right: 1px;
+                    &.text-yellow {
+                        color: $yellow-color;
+                    }
+                }
+            }
+            ion-note {
+                margin-top: -10px;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

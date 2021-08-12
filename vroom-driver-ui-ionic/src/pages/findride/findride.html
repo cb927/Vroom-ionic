@@ -1,0 +1,182 @@
+<ion-header class="bg-theme">
+    <ion-navbar>
+        <ion-title><span class="text-white">{{"edit_ride" | translate}}</span></ion-title>
+    </ion-navbar>
+    <div padding-left padding-right>
+        <ion-segment [(ngModel)]="ride">
+            <ion-segment-button value="oneway">
+                {{"one_way" | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="Return">
+                {{"return" | translate}}
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+</ion-header>
+
+<ion-content class="bg-background-img" padding>
+    <div [ngSwitch]="ride">
+        <ion-list *ngSwitchCase="'oneway'">
+            <ion-card class="search search-1">
+                <span class="dot bg-theme"></span>
+                <ion-card-content>
+                    <ion-searchbar (ionInput)="getItems($event)" placeholder="{{'set_depart' | translate}}"></ion-searchbar>
+                    <ion-searchbar class="nobdr" (ionInput)="getItems($event)" placeholder="{{'starting' | translate}}"></ion-searchbar>
+                </ion-card-content>
+            </ion-card>
+            <ion-card class="search search-2">
+                <span class="dot bg-yellow"></span>
+                <ion-card-content>
+                    <ion-searchbar (ionInput)="getItems($event)" placeholder="{{'set_destination' | translate}}"></ion-searchbar>
+                    <ion-searchbar class="nobdr" (ionInput)="getItems($event)" placeholder="{{'reaching' | translate}}"></ion-searchbar>
+                </ion-card-content>
+            </ion-card>
+            <p class="text-theme">{{"select_regular" | translate}} </p>
+            <br>
+            <div class="days text-white">
+                <ion-row>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>Monday</ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>Tuesday</ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>Wednesday</ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>Thursday</ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>Friday</ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>Saturday</ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>Sunday</ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <br>
+            <p class="text-theme">{{"set_min_fare" | translate}} ($)</p>
+            <div class="rate">
+                <ion-row>
+                    <ion-col col-6>
+                        <div class="seats-tag">
+                            <ion-icon name="remove-circle"></ion-icon>
+                            <strong>60 $</strong>
+                            <ion-icon name="add-circle"></ion-icon>
+                        </div>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button (click)="tabs()" small class="btn rounded bg-theme text-white" style="width: 100%">{{"update_info" | translate}}</button>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-list>
+        <ion-list *ngSwitchCase="'Return'">
+
+            <ion-card class="search search-1">
+                <span class="dot bg-yellow"></span>
+                <ion-card-content>
+                    <ion-searchbar (ionInput)="getItems($event)" placeholder="{{'set_depart1' | translate}}"></ion-searchbar>
+                    <ion-searchbar class="nobdr" (ionInput)="getItems($event)" placeholder="{{'starting' | translate}}"></ion-searchbar>
+                </ion-card-content>
+            </ion-card>
+            <ion-card class="search search-2">
+                <span class="dot bg-theme"></span>
+                <ion-card-content>
+                    <ion-searchbar (ionInput)="getItems($event)" placeholder="{{'set_destination1' | translate}}"></ion-searchbar>
+                    <ion-searchbar class="nobdr" (ionInput)="getItems($event)" placeholder="{{'reaching' | translate}}"></ion-searchbar>
+                </ion-card-content>
+            </ion-card>
+            <p class="text-theme">{{"select_travel_days" | translate}}</p>
+            <br>
+            <div class="days text-white">
+                <ion-row>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>{{"day1" | translate}} </ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>{{"day2" | translate}} </ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>{{"day3" | translate}} </ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>{{"day4" | translate}} </ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>{{"day5" | translate}} </ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>{{"day6" | translate}} </ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-label>{{"day7" | translate}} </ion-label>
+                            <ion-checkbox checked="true"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <br>
+            <p class="text-theme">{{"set_min_fare" | translate}} ($)</p>
+            <div class="rate">
+                <ion-row>
+                    <ion-col col-6>
+                        <div class="seats-tag">
+                            <ion-icon name="remove-circle"></ion-icon>
+                            <strong>60 $</strong>
+                            <ion-icon name="add-circle"></ion-icon>
+                        </div>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button (click)="tabs()" class="btn rounded bg-theme text-white" style="width: 100%" small>{{"update_info" | translate}}</button>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+        </ion-list>
+    </div>
+</ion-content>

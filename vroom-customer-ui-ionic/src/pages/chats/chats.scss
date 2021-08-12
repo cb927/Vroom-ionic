@@ -1,0 +1,64 @@
+page-chats {
+    ion-title {
+        ion-icon {
+            margin-left: auto;
+            float: right;
+            top: 1px;
+            position: relative;
+        }
+    }
+    .item {
+        border-bottom: 1px solid #dedede;
+        margin-bottom: 0;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        ion-avatar {
+            position: relative;
+            .badge {
+                border-radius: 50%;
+                height: 18px;
+                width: 18px;
+                padding: 0;
+                line-height: 18px;
+                font-weight: 500;
+                font-size: .92rem;
+                text-align: center;
+                position: absolute;
+                bottom: -5px;
+                right: 0px;
+            }
+        }
+        .item-inner {
+            border: none !important;
+            h2 {
+                margin: 2px 0;
+                font-size: 1.35rem;
+                font-weight: 600;
+                margin-bottom: 4px;
+                .text-theme {
+                    color: $theme-color;
+                }
+                ion-icon {
+                    margin-left: 3px;
+                    color: $theme-color;
+                }
+            }
+            p {
+                color: $text-light;
+                font-size: 1.3rem;
+            }
+            ion-note {
+                margin-top: -10px;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                span {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: $theme-color;
+                    margin-left: 7px;
+                }
+            }
+        }
+    }
+}

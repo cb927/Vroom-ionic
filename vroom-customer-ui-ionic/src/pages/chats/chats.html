@@ -1,0 +1,59 @@
+<ion-header class="bg-theme">
+    <ion-navbar>
+      <ion-title class="text-center">{{"chats" | translate}}
+      </ion-title>
+      <ion-icon name="md-search" class="text-white"></ion-icon>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <ion-item (click)="chatting()">
+        <ion-avatar item-start>
+            <img src="assets/imgs/face-1.jpg">
+            <ion-badge color="danger">9+</ion-badge>
+        </ion-avatar>
+        <h2 class="text-theme">Buzz Lightyear
+            <ion-icon name="ios-checkmark-circle"></ion-icon>
+        </h2>
+        <p>Washington sq Park?</p>
+        <ion-note item-end>Ride on<span class="time">1:12 pm</span></ion-note>
+    </ion-item>
+    <!-- repeat -->
+    <ion-item (click)="chatting()">
+        <ion-avatar item-start>
+            <img src="assets/imgs/man1.png">
+        </ion-avatar>
+        <h2>Buzz Lightyear
+            <ion-icon name="ios-checkmark-circle"></ion-icon>
+        </h2>
+        <p>Washington sq Park?</p>
+        <ion-note item-end>Ride on<span class="time">1:12 pm</span></ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-avatar item-start>
+            <img src="assets/imgs/man2.png">
+        </ion-avatar>
+        <h2>Buzz Lightyear</h2>
+        <p>Washington sq Park?</p>
+        <ion-note item-end>Ride on<span class="time">1:12 pm</span></ion-note>
+    </ion-item>
+    <ion-item (click)="chatting()">
+        <ion-avatar item-start>
+            <img src="assets/imgs/man3.png">
+        </ion-avatar>
+        <h2>Buzz Lightyear
+            <ion-icon name="ios-checkmark-circle"></ion-icon>
+        </h2>
+        <p>Washington sq Park?</p>
+        <ion-note item-end>Ride on<span class="time">1:12 pm</span></ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-avatar item-start>
+            <img src="assets/imgs/man4.png">
+        </ion-avatar>
+        <h2>Buzz Lightyear</h2>
+        <p>Washington sq Park?</p>
+        <ion-note item-end>Ride on<span class="time">1:12 pm</span></ion-note>
+    </ion-item>
+    <p text-center class="text-light"><small>{{"chat_text1" | translate}}<br>{{"chat_text2" | translate}}.</small></p>
+</ion-content>

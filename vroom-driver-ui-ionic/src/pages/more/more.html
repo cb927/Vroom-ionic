@@ -1,0 +1,91 @@
+<ion-header class="bg-theme">
+    <ion-navbar>
+        <ion-title class="text-center">{{"more" | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <ion-item>
+        <ion-avatar item-start>
+            <img src="assets/imgs/face-1.jpg">
+        </ion-avatar>
+        <div class="name">
+            <h2>David Johnson
+            </h2>
+            <p (click)="profile()">{{"view_profile" | translate}}</p>
+        </div>
+        <div class="more">
+            <h2>
+                <ion-icon name="ios-star"></ion-icon>
+                <ion-icon name="ios-star"></ion-icon>
+                <ion-icon name="ios-star"></ion-icon>
+                <ion-icon name="ios-star"></ion-icon>
+                <ion-icon name="ios-star"></ion-icon>
+            </h2>
+            <p>(53 {{"reviews" | translate}})</p>
+        </div>
+    </ion-item>
+
+    <ion-list no-lines>
+        <button ion-item (click)="reviews()">
+            <ion-avatar item-start>
+                <ion-icon name="ios-star"></ion-icon>
+            </ion-avatar>
+            {{"my_reviews" | translate}}
+        </button>
+        <button ion-item (click)="notification()">
+            <ion-avatar item-start>
+                <ion-icon name="md-notifications"></ion-icon>
+            </ion-avatar>
+            {{"notification" | translate}}
+        </button>
+        <button ion-item (click)="terms()">
+            <ion-avatar item-start>
+                <ion-icon name="md-paper"></ion-icon>
+            </ion-avatar>
+            {{"t&c" | translate}}
+        </button>
+        <button ion-item (click)="earn()">
+            <ion-avatar item-start>
+                <ion-icon name="md-share"></ion-icon>
+            </ion-avatar>
+            {{"refer_earn" | translate}}
+        </button>
+        <button ion-item (click)="ratevroom()">
+            <ion-avatar item-start>
+                <ion-icon name="md-thumbs-up"></ion-icon>
+            </ion-avatar>
+            {{"rate_vroom" | translate}}
+        </button>
+        <button ion-item (click)="help()">
+            <ion-avatar item-start>
+                <ion-icon name="md-alert"></ion-icon>
+            </ion-avatar>
+            {{"help" | translate}}
+        </button>
+        <button ion-item (click)="upload()">
+            <ion-avatar item-start>
+                <ion-icon name="md-paper"></ion-icon>   
+            </ion-avatar>
+            {{"verify_me" | translate}}
+        </button>
+        <button ion-item (click)="chooseLanguage()">
+            <ion-avatar item-start>
+                <ion-icon name="md-globe"></ion-icon>  
+            </ion-avatar>
+            {{"change_language" | translate}}
+        </button>
+    </ion-list>
+    <ion-list no-lines>
+        <button ion-item (click)="login()" text-center><h2 class="text-theme"><strong>{{"logout" | translate}}</strong></h2></button>
+
+    </ion-list>
+</ion-content>
+<ion-footer *ngIf="config.demoMode" class="footer-class">
+    <ion-item class="item-branding-class" (click)="developedBy()" no-lines>
+        <div class="div-logo">
+            <h4 class="text-white-dev">{{'developed_by' | translate}}</h4>
+            <img class="img-logo" src="assets/imgs/VT_black_logo.png" alt="">
+        </div>
+    </ion-item>
+</ion-footer>

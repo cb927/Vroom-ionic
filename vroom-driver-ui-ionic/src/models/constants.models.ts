@@ -1,0 +1,30 @@
+export class Constants {
+	static USER_ADMIN_KEY: string = "kg_admin_user";
+	static ADMIN_API_KEY: string = "kg_admin";
+	static USER_API_KEY: string = "kg_user";
+	static USER_KEY: string = "kg_user";
+	static CART: string = "kg_cart";
+	static KEY_LOCATION: string = "kg_location";
+	static PRODUCT_CATEGORIES: string = "kg_categories";
+	static SETTINGS: string = "kg_settings";
+	static KEY_DEFAULT_LANGUAGE: string = "kg_default_lang";
+	static KEY_LOCALE: string = "kg_locale";
+	static PRODUCT_CATEGORIES_PARENT: string = "kg_categories_parent";
+	static PAYMENT_GATEWAYS: string = "kg_payment_gateways";
+	static SHIPPING_LINES: string = "kg_shipping_lines";
+	static SELECTED_ADDRESS: string = "kg_address";
+	static SELECTED_COUPON: string = "kg_coupon";
+	static SELECTED_ADDRESS_LIST: string = "kg_address_list";
+	static CURRENCY: string = "kg_currency";
+	static TIME_SLOTS: string = "kg_time_slot";
+	static SELECTED_SHIPPING_METHOD: string = "kg_shipping_selected";
+	static SHIPPING_ZONE_LOCATIONS: string = "kg_shipping_zones";
+	static BANNERS: string = "kg_banners";
+	static FAVORITES: string = "kg_favorites";
+	static SEARCH_HISTORY: string = "kg_search_history";
+	static REF_USERS = "wamw/users";
+	static REF_CHAT = "wamw/chats";
+	static REF_INBOX = "wamw/inbox";
+	static REF_USERS_FCM_IDS = "wamw/user_fcm_ids";
+	static REF_ADMIN_USER = "wamw/adminuser";
+}

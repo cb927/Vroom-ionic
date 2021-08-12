@@ -1,0 +1,35 @@
+<ion-header class="transparent">
+    <ion-navbar>
+        <ion-title><span class="text-white">{{"find_ride" | translate}}</span></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-background-img" padding>
+    <ion-card class="search">
+        <ion-card-content>
+            <span class="dot bg-theme"></span>
+            <ion-searchbar (ionInput)="getItems($event)" placeholder="{{'ur_location' | translate}}"></ion-searchbar>
+            <ion-icon name="md-locate" class="text-black"></ion-icon>
+        </ion-card-content>
+        <ion-card-content>
+            <span class="dot bg-yellow"></span>
+            <ion-searchbar (ionInput)="getItems($event)" placeholder="{{'whr_2_go' | translate}}"></ion-searchbar>
+            <span class="text-light search-text">{{"office" | translate}}&nbsp;<ion-icon name="ios-arrow-down" class="text-light"></ion-icon></span>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="search">
+        <ion-card-content>
+            <ion-icon name="md-calendar"></ion-icon>
+            <ion-searchbar (ionInput)="getItems($event)" placeholder="{{'date' | translate}}"></ion-searchbar>
+            <span class="text-light search-text">{{"today" | translate}}?</span>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="search">
+        <ion-card-content>
+            <ion-icon name="md-time"></ion-icon>
+            <ion-searchbar (ionInput)="getItems($event)" placeholder="{{'time' | translate}}"></ion-searchbar>
+            <span class="text-light search-text">{{"in_next_hr" | translate}}?</span>
+        </ion-card-content>
+    </ion-card>
+    <button (click)="listride()" class="btn rounded bg-white text-theme" style="width: 100%">{{"list" | translate}}</button>
+</ion-content>

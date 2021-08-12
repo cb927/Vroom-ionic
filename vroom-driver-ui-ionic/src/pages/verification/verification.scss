@@ -1,0 +1,33 @@
+page-verification {
+    .login {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        padding: 25px;
+        padding-bottom: 0;
+        height: 355px;
+    }
+    .logo {
+        margin: 0% auto;
+        height: calc(50vh - 70px);
+        position: relative;
+        img {
+            position: absolute;
+            width: 144px;
+            height: 144px;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    .bg-background-img {
+        background-position-y: -100px;
+    }
+    .text-input {
+        text-align: center !important;
+        font-size: 2rem;
+        letter-spacing: 1rem;
+    }
+}

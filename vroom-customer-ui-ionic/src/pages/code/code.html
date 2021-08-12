@@ -1,0 +1,25 @@
+<ion-content padding>
+    <h1 text-right>
+        <ion-icon class="text-white" name="md-close" (click)="dismiss()"></ion-icon>
+    </h1>
+    <ion-card>
+        <img src="assets/imgs/menu-bg.png" />
+        <ion-card-content>
+            <div padding-top padding-right padding-left>
+                <ion-card-title class="text-theme">
+                    {{"code_text1" | translate}}
+                </ion-card-title>
+                <h5 padding-top>
+                    {{"code_text2" | translate}} <br>
+                    {{"code_text3" | translate}}
+                </h5>
+                <ion-list class="form">
+                    <ion-item class="bg-light">
+                        <ion-input type="text" placeholder="Add 6 digit referral code" class="text-light"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <p><strong class="text-dark">{{"idnt_hv" | translate}} </strong><strong class="text-theme" style="float: right;" (click)="rootpage()">{{"continue" | translate}}</strong></p>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

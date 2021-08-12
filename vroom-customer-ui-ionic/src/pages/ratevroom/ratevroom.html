@@ -1,0 +1,47 @@
+<ion-header class="bg-theme">
+    <ion-navbar>
+        <ion-title text-uppercase>{{"rate_vroom" | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <ion-card class="slip">
+        <div text-center>
+            <h4 class="text-dark">{{"rate_driver_text1" | translate}}</h4>
+            <p class="text-light">22nd Feb 2018, 12:20 pm</p>
+            <h1 class="text-theme">$ 120</h1>
+            <h4 class="text-dark">{{"rate_vroom_text1" | translate}} <br> {{"rate_vroom_text1" | translate}} </h4>
+        </div>
+    </ion-card>
+    <ion-card class="rate">
+        <div text-center>
+            <p>{{"rate_driver_text3" | translate}}</p>
+            <div class="driver">
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <h2>David Johnson
+                        <ion-icon name="ios-checkmark-circle" class="text-theme"></ion-icon>
+                    </h2>
+                    <p>Honda Civic | White</p>
+                </ion-item>
+                <p class="icons">
+                    <ion-icon name="ios-star"></ion-icon>
+                    <ion-icon name="ios-star"></ion-icon>
+                    <ion-icon name="ios-star"></ion-icon>
+                    <ion-icon name="ios-star"></ion-icon>
+                    <ion-icon name="ios-star"></ion-icon>
+                </p>
+                <div class="form">
+                    <ion-list no-lines>
+                        <ion-item>
+                            <ion-textarea type="text" value="Leave a feedback"></ion-textarea>
+                        </ion-item>
+                    </ion-list>
+                </div>
+                <p padding-top><button class="btn text-white bg-theme rounded" style="width: 100%;">{{"submit_rating" | translate}}</button></p>
+            </div>
+        </div>
+    </ion-card>
+</ion-content>

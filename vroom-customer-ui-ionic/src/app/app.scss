@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800');
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+strong,
+li,
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.scroll-content {
+    overflow: hidden;
+    overflow-y: auto;
+}
+ 
+$theme-color: #0fc874;
+$header-bg: $theme-color;
+$header-text: #fff;
+$yellow-color: #ffca28;
+$white-color: #fff;
+$form-bg:#f3f3f3;
+$light-color:#f3f3f3;
+$text-dark:#4c4c4c;
+$text-light:#bfbfbf;
+$bg-light:#f2f2f2;
+//text color css
+.back-button,
+.text-white {
+    color: $white-color;
+}
+
+.text-theme {
+    color: $theme-color;
+}
+
+.text-dark {
+    color: $text-dark ;
+}
+
+.text-yellow {
+    color: $yellow-color;
+}
+
+.text-light {
+    color: $text-light ;
+}
+
+.bg-theme {
+    background: $theme-color;
+}
+
+.bg-light {
+    background: $bg-light;
+}
+
+.bg-yellow {
+    background: $yellow-color;
+}
+
+.bg-white {
+    background: $white-color;
+}
+
+.tabs-md .tab-button {
+    border-top: 2px solid $white-color;
+}
+
+.tab-button[aria-selected=true],
+.tab-button[aria-selected=true] .tab-button-icon {
+    color: $theme-color !important;
+    border-color: $theme-color !important;
+}
+
+.tabbar {
+    background-color: $white-color !important;
+}
+
+.back-button-text {
+    display: none;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    height: 40px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    &.small {
+        font-size: 1.2rem;
+        height: 35px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        text-transform: capitalize;
+        ion-icon {
+            margin-right: auto;
+            font-size: 2rem;
+            margin-left: 5px;
+        }
+        span {
+            margin: auto;
+        }
+    }
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+//header transparent
+.transparent.header {
+    background: transparent;
+    .toolbar-background {
+        background: transparent;
+        border: none !important;
+    }
+    &::after {
+        display: none;
+    }
+}
+
+.toolbar-title {
+    font-size: 1.65rem !important;
+}
+
+.bg-background-img {
+    background: url(../assets/imgs/background.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+.form {
+    background: $form-bg;
+    border-radius: 10px;
+    overflow: hidden;
+    .item {
+        border-top: none !important;
+    }
+    .text-input-wp {
+        border: none;
+    }
+    ion-item {
+        padding: 0;
+        background: transparent !important;
+        &:last-child {
+            border-bottom: none !important;
+            .item-inner {
+                border-bottom: none !important;
+            }
+        }
+        .item-inner {
+            padding: 0 !important;
+            .input-wrapper {
+                padding-left: 16px;
+                padding-right: 16px;
+                .label {
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+                ion-input {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .input-has-focus {
+        box-shadow: none !important;
+        .item-inner {
+            box-shadow: none !important;
+            border-bottom-color: #dedede !important;
+        }
+    }
+}
+
+//green header inner pages
+.header.bg-theme {
+    .toolbar-background {
+        background: $header-bg !important;
+    }
+    .text-center {
+        text-align: center !important;
+    }
+    .toolbar-title {
+        color: $header-text !important;
+    }
+}
+
+//tab css
+ion-segment-button {
+    color: $white-color !important;
+    text-transform: unset !important;
+    font-weight: 600 !important;
+    border-color: transparent !important;
+    &.segment-button.segment-activated {
+        border-color: $white-color !important;
+    }
+}
+
+.fix-btn {
+    z-index: 999;
+}
+
+.space {
+    z-index: -1;
+}
+  page-listride{
+    .toolbar-content{
+      ion-icon{
+        margin-right: 10px;
+        float: right;
+      }
+    }
+  }
+  page-chats{
+    .toolbar-content{
+      ion-icon{
+        margin-right: 10px;
+        float: right;
+      }
+    }
+  }
+  page-chatting{
+    .fixed-bottom {
+      position: unset !important;
+    }
+  }
+  ion-footer{
+    ion-toolbar{
+      .toolbar-background {
+        border: none !important;
+        background: transparent;
+      }
+    }
+  }
+[dir="rtl"] body {
+  .item-ios[detail-push] .item-inner, button.item-ios:not([detail-none]) .item-inner, a.item-ios:not([detail-none]) .item-inner {
+    background-image: url("./assets/imgs/left-arrow.png");
+    padding-left: 32px;
+    background-position: left 14px center;
+    background-position: left calc(14px + constant(safe-area-inset-left)) center;
+    background-position: left calc(14px + env(safe-area-inset-left)) center;
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    /* transform: rotateY(180deg); */
+  }
+  ion-input input{
+    text-align: left !important;
+  }
+  page-myride{
+    .card ion-item .more h2 ion-icon{
+      margin-left: unset;
+      margin-right: auto;
+    }
+    ion-card-content {
+      padding-right: 60px !important;
+      .status{
+        left: unset;
+        right: 0;
+        transform: rotateY(180deg);
+      }
+      .ride-detail::before{
+        left: unset;
+        right: 4px;
+      }
+      .ride-detail p {
+        padding-left: unset;
+        padding-right: 10px;
+        .icon-location{
+          right: 0;
+          left: unset;
+        }
+      }
+      .full.btn{
+        float: left;
+      }
+    }
+  }
+  page-chatting {
+    .toolbar-content .item .item-inner h2 {
+      margin-left: 10px;
+      ion-icon {
+        margin-left: auto;
+        margin-left: unset;
+        margin-right: auto;
+      }      
+    }
+  }
+  page-findride {
+    .search span.search-text {
+      text-align: left;
+    }
+    .search .card-content .searchbar-input {
+      text-align: right;
+    }    
+  }
+  page-listride{
+    .toolbar-content{
+      ion-icon{
+        margin-left: 10px;
+        float: left;
+      }
+    }
+    ion-card-content {
+      padding-right: 60px !important;
+      .status{
+        left: unset;
+        right: 0;
+        transform: rotateY(180deg);
+      }
+      .ride-detail::before{
+        left: unset;
+        right: 4px;
+      }
+      .ride-detail p {
+        padding-left: unset;
+        padding-right: 10px;
+        .icon-location{
+          right: 0;
+          left: unset;
+        }
+      }
+      .full.btn{
+        float: left;
+      }
+    }
+  }
+  page-filter{
+    ion-select{
+      padding-right: 16px;
+      padding-left: 0px;
+      .select-icon{
+        margin-right: 7px;
+      }
+    }
+  }
+  page-chats{
+    .toolbar-content{
+      ion-icon{
+        margin-left: 10px;
+        float: left;
+      }
+    }
+    .item .item-inner ion-note span{
+      margin-right: 7px;
+    }
+  }
+  page-chatting{
+    .fixed-bottom {
+      position: unset !important;
+      .list {
+        .text-input{
+          text-align: right !important;
+        }
+        .icon {
+          transform: rotateY(180deg);
+        }        
+      }
+    }
+  }
+  page-riderprofile{
+    ion-card-content {
+      padding-right: 30px !important;
+      .status{
+        left: unset;
+        right: 0;
+        transform: rotateY(180deg);
+      }
+      .ride-detail::before{
+        left: unset;
+        right: 3px;
+      }
+      .ride-detail {
+        p {
+          padding-left: unset;
+          padding-right: 20px;
+          .icon-location{
+            right: 0;
+            left: unset;
+          }
+        }        
+      }
+      .full.btn{
+        float: left;
+      }
+    }
+    .fix-btn{
+      position: unset !important;
+    }
+  }
+  page-confirmride{
+    ion-card-content {
+      padding-right: 30px !important;
+      .status{
+        left: unset;
+        right: 0;
+        transform: rotateY(180deg);
+      }
+      .ride-detail::before{
+        left: unset;
+        right: 5px;
+      }
+      .ride-detail {
+        h6,p{
+          padding-right: 45px;
+        }
+        p {
+          padding-left: unset;
+          // padding-right: 20px;
+          .icon-location{
+            right: 0;
+            left: unset;
+          }
+          small ion-icon{
+            float: left;
+          }
+        }        
+      }
+      .full.btn{
+        float: left;
+      }
+    }
+  }
+  page-confirmpopup{
+    ion-card-content {
+      padding-right: 30px !important;
+      .status{
+        left: unset;
+        right: 0;
+        transform: rotateY(180deg);
+      }
+      .ride-detail::before{
+        left: unset;
+        right: 5px;
+        height: 50px;
+      }
+      .ride-detail {
+        h6,p{
+          padding-right: 45px;
+        }
+        p {
+          padding-left: unset;
+          // padding-right: 20px;
+          .icon-location{
+            right: 0;
+            left: unset;
+          }
+          small ion-icon{
+            float: left;
+          }
+        }        
+      }
+      .full.btn{
+        float: left;
+      }
+    }
+  }
+  page-help {
+    ion-card-header h1 ion-icon {
+      float: left;
+    }    
+  }
+  page-signup{
+    .click-img {
+      padding-right: 0;
+      padding-left: 5px;
+    }
+  }
+  [float-end] {
+    float: left !important;
+  }
+  .menu-inner {
+      right: 0;
+      left: auto;
+  }
+  .toolbar-ios ion-title {
+      padding: 0 16px 1px !important;
+  }
+  .toolbar-title {
+    padding-right: 30px !important;
+    .icon-box {
+        position: relative;
+        margin-left: unset;
+        margin-right: auto;
+    }
+  }
+  .form ion-list ion-item .text-input,
+  .form ion-list .item-inner .text-input {
+      text-align: right;
+  }
+  ion-header {
+      .toolbar-title.toolbar-title-md span {
+          left: -1px;
+          right: unset;
+      }
+      .back,
+      .back-button {
+          transform: rotate(180deg);
+      }
+  }
+}

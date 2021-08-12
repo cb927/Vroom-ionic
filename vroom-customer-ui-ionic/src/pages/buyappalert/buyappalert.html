@@ -1,0 +1,26 @@
+<ion-content>
+    <div class="clear_button">
+        <ion-icon name="md-close" (click)="dismiss()"></ion-icon>
+    </div>
+    <div class="container no_backend">
+        <h2>{{'Buy_this' | translate}} <br> {{'Template_Now' | translate}}</h2>
+        <p>{{'IONIC_template_only_No_Backend' | translate}}</p>
+        <div class="button" (click)="onCodecanoyon()">
+            <div class="icon_box">
+                <img src="https://opuslabs.nyc3.digitaloceanspaces.com/AAFixItems/Other/ic_codecanyon.png">
+            </div>
+            <h3>{{'Get_it_on' | translate}}<strong>{{'Codecanoyon' | translate}}</strong></h3>
+        </div>
+    </div> 
+    
+    <div class="container complete_backend">
+        <h2>{{'Buy_this_App_with' | translate}}<br>{{'Complete_Backend' | translate}}</h2>
+        <p>{{'Full_App_solution_with_complete_Backend' | translate}}</p>
+        <div class="button" (click)="onwhatsapp()">
+            <div class="icon_box">
+                <img src="https://opuslabs.nyc3.digitaloceanspaces.com/AAFixItems/Other/ic_whatsapp.png">
+            </div>
+            <h3>{{'Message_on' | translate}}<strong>{{'WhatsApp' | translate}}</strong></h3>
+        </div>
+    </div>
+</ion-content>

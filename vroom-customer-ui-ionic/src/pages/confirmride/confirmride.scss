@@ -1,0 +1,134 @@
+page-confirmride {
+    .card {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 6px;
+        margin-top: 6px;
+        ion-item {
+            .name {
+                width: calc(100% - 90px);
+                display: inline-block;
+                h2 {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    ion-icon {
+                        margin-left: 5px;
+                    }
+                }
+            }
+            p {
+                font-size: 1.1rem;
+                color:  $text-dark;
+                font-weight: 400;
+            }
+        }
+    }
+    ion-card-content {
+        padding-left: 30px !important;
+        position: relative;
+        .ride-detail {
+            position: relative;
+            margin-bottom: 1rem;
+            h6 {
+                margin: 1.5rem 0 .5rem;
+                color:$theme-color;
+                padding-left: 45px;
+            }
+            p {
+                font-size: 1.2rem;
+                padding-left: 10px;
+                position: relative;
+                color: $text-dark;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100%;
+                padding-left: 45px;
+                small {
+                    display: block;
+                    width: 100%;
+                    margin-top: 18px;
+                    margin-bottom: 3px;
+                    font-size: 1.1rem;
+                    color: $text-light;
+                    ion-icon {
+                        float: right;
+                        font-size: 1.3rem;
+                        margin-right: 5px;
+                    }
+                }
+                .icon-location {
+                    position: absolute;
+                    left: 0px;
+                    top: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    bottom: 0;
+                    margin: auto;
+                    color: $text-light;
+                }
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 60px;
+                background: $text-dark;
+                position: absolute;
+                left: 5px;
+                bottom: 25px;
+            }
+            &.no-before {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        .detail-text {
+            font-size: 1.23rem;
+            text-transform: none;
+            font-weight: 500;
+        }
+        .full.btn {
+            width: 100%;
+            text-transform: capitalize;
+            letter-spacing: 0px;
+            font-weight: 400;
+            height: 35px;
+        }
+    }
+    .seats {
+        .rate {
+            font-weight: 700;
+            color:$theme-color;
+            small {
+                font-weight: 300;
+                color: #9E9E9E;
+                display: block;
+            }
+        }
+        h6 {
+            color:$theme-color;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        .seats-tag {
+            padding: 12px;
+            display: flex;
+            border: 1px solid$theme-color;
+            border-radius: 10px;
+            color:$theme-color;
+            align-items: center;
+            ion-icon {
+                font-size: 2rem;
+            }
+            strong {
+                margin: auto;
+                color: #000;
+            }
+        }
+    }
+}

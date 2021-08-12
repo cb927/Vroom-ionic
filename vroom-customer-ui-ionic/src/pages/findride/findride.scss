@@ -1,0 +1,41 @@
+page-findride {
+    .search {
+        border-radius: 10px;
+        margin: 10px 0;
+        width: 100%;
+        .card-content {
+            display: flex !important;
+            align-items: center;
+            padding: 5px 15px;
+            .searchbar-search-icon {
+                display: none;
+            }
+            .searchbar-input {
+                padding: 4px 14px !important;
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+                font-size: 1.25rem;
+            }
+            .searchbar {
+                padding: 0 !important;
+                background: transparent !important;
+                border: none !important;
+            }
+            .dot {
+                min-width: 10px;
+                min-height: 10px;
+                display: block;
+                border-radius: 50%;
+                &.icons {
+                    width: auto;
+                    border-radius: 0;
+                }
+            }
+        }
+        span.search-text {
+            width: 140px;
+            font-size: 1.3rem;
+            text-align: right;
+        }
+    }
+}

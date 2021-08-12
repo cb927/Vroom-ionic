@@ -1,0 +1,101 @@
+page-more {
+    ion-item {
+        padding-bottom: 2.3rem !important;
+        padding-top: 2.3rem !important;
+        padding-left: 2rem !important;
+        padding-right: .5rem !important;
+        margin-bottom: 5px !important;
+        ion-avatar {
+            min-width: 80px !important;
+            min-height: 80px !important;
+            img {
+                min-width: 80px !important;
+                min-height: 80px !important;
+            }
+        }
+        .item-inner {
+            border-bottom: none !important;
+        }
+        .name {
+            width: calc(100% - 95px);
+            display: inline-block;
+            h2 {
+                font-size: 1.35rem;
+                font-weight: 600;
+                margin-bottom: 6px;
+                small {
+                    margin-left: 5px;
+                    color: $text-light;
+                }
+            }
+        }
+        .more {
+            width: 80px;
+            display: inline-block;
+            text-align: right;
+            h2 {
+                font-size: 1.1rem;
+                color: $yellow-color;
+                margin-bottom: 6px;
+            }
+            p {
+                font-size: 1rem;
+                color: $text-light !important;
+                font-weight: 500;
+            }
+        }
+        p {
+            font-size: 1rem !important;
+            color: $theme-color !important;
+            font-weight: 400
+        }
+    }
+    button {
+        .item-inner {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        ion-avatar {
+            position: relative;
+            text-align: center;
+            width: 60px;
+            ion-icon {
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                color: $theme-color;
+            }
+        }
+    }
+    .div-logo{
+		display: flex;
+		align-items: flex-end;
+		width: fit-content;
+	  }
+	  img.img-logo {
+		width: 140px;
+	  }
+	  h4.text-white-dev {
+		margin: inherit;
+	  }
+	  .footer-md::before {
+		background-image: none;
+	   
+	  }
+	  .item-branding-class {
+		// background: none;
+		text-align: -webkit-center;
+        padding: 4px;
+        padding-bottom: 0rem !important;
+        padding-top: 0rem !important;
+	  }
+	  .footer-class{
+		background: none;
+		// padding-bottom: 0%;
+      }
+}

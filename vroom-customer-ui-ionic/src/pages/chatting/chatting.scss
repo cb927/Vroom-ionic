@@ -1,0 +1,79 @@
+page-chatting {
+    .toolbar-content {
+        .item {
+            background: transparent;
+            padding: 0;
+            ion-label,
+            ion-avatar {
+                margin-top: 2px !important;
+                margin-bottom: 2px !important;
+            }
+            .item-inner {
+                border: none;
+                h2 {
+                    font-weight: 500;
+                    display: flex;
+                    font-size: 1.4rem;
+                    align-items: center;
+                    ion-icon {
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
+    .chat-bg {
+        background: url(../assets/imgs/chatbg.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    .chat {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        p {
+            margin-top: 0px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-size: 1.3rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            small {
+                opacity: .7;
+            }
+        }
+    }
+    .fixed-bottom {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 56px;
+        background: $white-color;
+        padding-top: 2px;
+        .list {
+            padding: 0;
+            border-radius: 0;
+            margin: 0;
+            .item {
+                padding-left: 16px;
+            }
+            .text-input {
+                font-size: 1.2rem;
+            }
+            .circle-icon {
+                border: 1px solid #9E9E9E;
+                color: #9E9E9E;
+                border-radius: 50%;
+                width: 3rem;
+                height: 3rem;
+            }
+            .icon {
+                font-size: 2rem;
+                line-height: 1.4;
+            }
+        }
+    }
+}

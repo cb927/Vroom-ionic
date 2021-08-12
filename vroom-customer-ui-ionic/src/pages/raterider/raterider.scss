@@ -1,0 +1,87 @@
+page-raterider {
+    .card {
+        margin-top: 0px;
+        padding: 30px;
+        box-shadow: none;
+        position: relative;
+        overflow: visible;
+        h1 {
+            font-size: 4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #0fc874;
+            font-weight: 600;
+        }
+        h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.1rem;
+            color: $text-light;
+        }
+        &.slip {
+            margin-bottom: 20px;
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                position: absolute;
+                height: 12px;
+                background: url(../assets/imgs/border-down.jpg);
+                background-repeat: repeat-x;
+                background-size: 15px;
+                left: 0;
+                bottom: -10px;
+            }
+        }
+        &.rate {
+            padding-top: 10px;
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                position: absolute;
+                height: 12px;
+                background: url(../assets/imgs/border-up.jpg);
+                background-repeat: repeat-x;
+                background-size: 15px;
+                left: 0;
+                top: -6px;
+            }
+            .driver {
+                ion-item {
+                    &.item {
+                        width: 220px;
+                        margin: auto;
+                        .item-inner {
+                            h2 {
+                                font-weight: 500;
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+                p {
+                    &.icons {
+                        margin-bottom: 2.5rem;
+                        margin-top: 1rem;
+                        ion-icon {
+                            font-size: 3.5rem;
+                            margin-left: 3px;
+                        }
+                    }
+                }
+                ion-textarea {
+                    height: 8rem;
+                    color: $text-light;
+                    font-size: 1.3rem;
+                    .text-input {
+                        height: 10rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<ion-header class="transparent">
+    <ion-navbar>
+        <ion-title><span class="text-white">{{"verification" | translate}}</span></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-background-img">
+    <div class="logo">
+        <img src="assets/imgs/logo.png" alt="logo">
+    </div>
+    <div class="bg-white login">
+        <div class="">
+            <p padding text-center>{{"verification_txt" | translate}}<br>{{"verification_txt1" | translate}}</p>
+            <br>
+            <ion-list class="form" text-center>
+                <ion-item>
+                    <ion-input type="text" value="33456" text-right></ion-input>
+                </ion-item>
+            </ion-list>
+            <button ion-button full class="bg-theme text-white btn rounded" (click)="code()">{{"next" | translate}}</button>
+        </div>
+    </div>
+</ion-content>

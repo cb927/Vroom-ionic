@@ -1,0 +1,45 @@
+page-upload {
+    p {
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin-top: 3rem !important;
+    }
+    h2 {
+        margin-top: 0;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 70px;
+        &::before {
+            content: '';
+            width: 131px;
+            height: 3px;
+            margin: 0 auto;
+            background: $theme-color;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    }
+    img {
+        width: 70%;
+    }
+    .verifiy {
+        margin-top: 60px;
+        img {
+            width: 50%;
+        }
+    }
+    .btn-box {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        button {
+            margin: 0 auto;
+        }
+    }
+}

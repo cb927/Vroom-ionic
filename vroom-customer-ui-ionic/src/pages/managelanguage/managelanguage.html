@@ -1,0 +1,18 @@
+<ion-header class="bg-theme">
+    <ion-navbar>
+        <ion-title>{{"change_language" | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="">
+	<ion-list no-lines>
+		<ion-item *ngFor="let language of config.availableLanguages" (click)="onLanguageClick(language)">
+			<h3>{{language.name}}</h3>
+			<ion-icon *ngIf="defaultLanguageCode == language.code" name="md-globe" item-end></ion-icon>
+		</ion-item>
+	</ion-list>
+</ion-content>
+<ion-footer no-border>
+	<button ion-button full class="btn bg-thime" (click)="languageConfirm()">
+		{{'save' | translate}}
+	</button>
+</ion-footer>

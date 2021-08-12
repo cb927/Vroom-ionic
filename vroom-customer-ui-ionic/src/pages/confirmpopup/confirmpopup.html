@@ -1,0 +1,54 @@
+<ion-content>
+    <ion-icon name="md-close" class="close-icon text-white" (click)="dismiss()"></ion-icon>
+    <ion-card>
+        <h6 class="text-theme">{{"con_popup_text" | translate}}</h6>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/imgs/face-1.jpg">
+            </ion-avatar>
+            <div class="name">
+                <h2>David Johnson</h2>
+                <p>Honda Cvic | White</p>
+            </div>
+        </ion-item>
+        <ion-card-content>
+            <div class="ride-detail">
+                <p><small>{{"pick_location" | translate}}</small>
+                    <span class="icon-location bg-theme"></span>Washington sq.park New York</p>
+                <p>
+                    <small>{{"drop_location" | translate}}</small>
+                    <span class="icon-location bg-yellow"></span>Harison, east sq.park New York</p>
+            </div>
+        </ion-card-content>
+
+        <ion-card-content>
+            <div class="ride-detail no-before">
+                <p><small>{{"date" | translate}}<span class="text-theme" float-end>{{"change" | translate}}</span></small>
+                    <ion-icon name="md-calendar" class="icon-location"></ion-icon>
+                    22<sup>nd</sup> Feb, 2018 </p>
+                <p>
+                    <small>{{"time" | translate}}</small>
+                    <ion-icon name="md-time" class="icon-location"></ion-icon>
+                    Between 12:10pm to 12:30pm</p>
+            </div>
+        </ion-card-content>
+
+        <ion-card-content>
+            <div class="seats">
+                <ion-row>
+                    <ion-col col-4 class="rate">
+                        <small>{{"est_fare" | translate}}</small> $ 120
+                    </ion-col>
+                    <ion-col col-8>
+                        <div class="seats-tag">
+                            <ion-icon name="remove-circle"></ion-icon>
+                            <strong>2 {{"seats" | translate}}</strong>
+                            <ion-icon name="add-circle"></ion-icon>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <button class="btn bg-theme text-white rounded" (click)="confirmpopup()" style="width: 100%;margin-top: 14px;">{{"con_request" | translate}}</button>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

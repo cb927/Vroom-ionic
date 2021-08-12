@@ -1,0 +1,62 @@
+<ion-header class="bg-theme">
+    <ion-navbar>
+        <ion-title>{{"filter" | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <p class="text-light" padding>{{"sort_by" | translate}}</p>
+    <ion-card>
+        <ion-card-header>
+            <ion-list radio-group>
+                <ion-item>
+                    <ion-label>{{"rating" | translate}} </ion-label>
+                    <ion-radio checked="true" value="Rating"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>{{"price" | translate}} </ion-label>
+                    <ion-radio value="Price"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-card-header>
+    </ion-card>
+    <p class="text-light" padding>{{"price_range" | translate}}</p>
+    <ion-card>
+        <ion-card-header>
+            <ion-item>
+                <ion-range dualKnobs="true" [(ngModel)]="structure" color="success">
+                    <span range-left class="left-text">$ 40</span>
+                    <span range-right class="right-text">$ 70</span>
+                </ion-range>
+            </ion-item>
+        </ion-card-header>
+    </ion-card>
+    <p class="text-light" padding>{{"availiblity" | translate}} </p>
+    <ion-card>
+        <ion-card-header>
+            <ion-list>
+                <ion-item>
+                    <ion-label>{{"seat_avl" | translate}} </ion-label>
+                    <ion-select [(ngModel)]="notifications" interface="action-sheet">
+                        <ion-option selected value="1">1 Seat</ion-option>
+                        <ion-option value="2">2 Seats</ion-option>
+                        <ion-option value="3">3 Seats</ion-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item class="check-item">
+                    <ion-checkbox></ion-checkbox>
+                    <ion-label>Air Conditioner</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-card-header>
+    </ion-card>
+    <ion-row class="fix-btn">
+        <ion-col>
+            <button class="btn rounded text-theme bg-white full">{{"reset" | translate}} </button>
+        </ion-col>
+        <ion-col>
+            <button class="btn rounded text-white bg-theme full">{{"apply" | translate}}</button>
+        </ion-col>
+    </ion-row>
+    <div class="space">&nbsp;</div>
+</ion-content>

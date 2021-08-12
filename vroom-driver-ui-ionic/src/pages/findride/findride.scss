@@ -1,0 +1,131 @@
+page-findride {
+    .search {
+        border-radius: 10px;
+        margin: 10px 0;
+        width: 100%;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 40px;
+            background: $text-dark;
+            position: absolute;
+            left: 20px;
+        }
+        &.search-1 {
+            &::before {
+                bottom: 0;
+            }
+        }
+        &.search-2 {
+            &::before {
+                top: 0;
+            }
+        }
+        padding-left: 20px;
+        .dot {
+            max-width: 11px;
+            max-height: 11px;
+            height: 11px;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            width: 13px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 15px;
+            &.icons {
+                width: auto;
+                border-radius: 0;
+            }
+        }
+        .card-content {
+            display: block !important;
+            align-items: center;
+            padding: 5px 15px;
+            padding-left: 25px;
+            .searchbar-search-icon {
+                display: none;
+            }
+            .searchbar-input {
+                padding: 3px 0px !important;
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+                font-size: 1.25rem;
+                border-bottom: 1px solid #ccc;
+            }
+            .searchbar {
+                padding: 0 !important;
+                background: transparent !important;
+                border: none !important;
+                &.nobdr {
+                    .searchbar-input {
+                        border-bottom: 0px solid #ccc;
+                    }
+                }
+            }
+        }
+        span.search-text {
+            width: 140px;
+            font-size: 1.3rem;
+            text-align: right;
+        }
+    }
+    p {
+        &.text-theme {
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+    }
+    .days {
+        .item {
+            padding-left: 0;
+            background: transparent;
+            min-height: 20px;
+            .checkbox {
+                margin: 0 14px 0 0 !important;
+                .checkbox-icon {
+                    width: 14px;
+                    height: 14px;
+                    border-width: 1px;
+                }
+                .checkbox-checked {
+                    border-color: $theme-color;
+                    background-color: $theme-color;
+                    .checkbox-inner {
+                        border-color: $text-dark;
+                    }
+                }
+            }
+            .item-inner {
+                border: none !important;
+            }
+            .label {
+                margin: 0;
+                color: $white-color;
+                font-size: 1.15rem;
+            }
+        }
+    }
+    .seats-tag {
+        padding: 12px 18px 12px 0px;
+        display: flex;
+        color: $theme-color;
+        align-items: center;
+        ion-icon {
+            font-size: 2.3rem;
+        }
+        strong {
+            margin: auto;
+            color: $white-color;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+    .btn {
+        font-size: 1.15rem;
+        font-weight: 400;
+    }
+}

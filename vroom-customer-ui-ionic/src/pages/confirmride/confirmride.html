@@ -1,0 +1,65 @@
+<ion-header class="bg-theme">
+    <ion-navbar>
+        <ion-title>{{"con_ride" | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bh-light">
+    <ion-card>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/imgs/face-1.jpg">
+            </ion-avatar>
+            <div class="name">
+                <h2>David Johnson
+                    <ion-icon name="ios-checkmark-circle" class="text-theme"></ion-icon>
+                </h2>
+                <p>Honda Cvic | White</p>
+            </div>
+        </ion-item>
+        <ion-card-content>
+            <div class="ride-detail">
+                <h6 class="text-theme">{{"location" | translate}}</h6>
+                <p><small>{{"pick_location" | translate}}<ion-icon name="md-create"></ion-icon></small>
+                    <span class="icon-location bg-theme"></span>Washington sq.park New York</p>
+                <p>
+                    <small>{{"drop_location" | translate}}<ion-icon name="md-create"></ion-icon></small>
+                    <span class="icon-location bg-yellow"></span>Harison, east sq.park New York</p>
+            </div>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+            <div class="ride-detail no-before">
+                <h6 class="text-theme">{{"date" | translate}} & {{"time" | translate}}</h6>
+                <p><small>{{"date" | translate}}<ion-icon name="md-create"></ion-icon></small>
+                    <ion-icon name="md-calendar" class="icon-location"></ion-icon>
+                    22<sup>nd</sup> Feb, 2018 </p>
+                <p>
+                    <small>{{"time" | translate}}</small>
+                    <ion-icon name="md-time" class="icon-location"></ion-icon>
+                    Between 12:10pm to 12:30pm</p>
+            </div>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+            <div class="seats">
+                <h6 class="text-theme">{{"fare_seat_info" | translate}}</h6>
+                <ion-row>
+                    <ion-col col-4 class="rate">
+                        <small>{{"est_fare" | translate}}</small> $ 120
+                    </ion-col>
+                    <ion-col col-8>
+                        <div class="seats-tag">
+                            <ion-icon name="remove-circle"></ion-icon>
+                            <strong>2 {{"seats" | translate}}</strong>
+                            <ion-icon name="add-circle"></ion-icon>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <button class="btn bg-theme text-white rounded" (click)="confirmpopup()" style="width: 100%;margin-top: 16px;">{{"con_request" | translate}}</button>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

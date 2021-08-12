@@ -1,0 +1,54 @@
+<ion-header class="transparent">
+    <ion-navbar>
+        <ion-title text-uppercase><span class="text-white">{{"signup" | translate}}</span></ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+
+<ion-content class="bg-background-img">
+    <div class="logo">
+        <img src="assets/imgs/logo.png" alt="logo">
+    </div>
+
+    <div class="bg-white login">
+        <div class="">
+            <ion-row>
+                <ion-col class="click-img">
+                    <div class="form">
+                        <ion-icon name="camera"></ion-icon>
+                    </div>
+
+                </ion-col>
+                <ion-col class="name-fild">
+                    <ion-list class="form" style="margin-bottom: 0">
+                        <ion-item>
+                            <ion-label>{{"f_name" | translate}}</ion-label>
+                            <ion-input type="text" value="Johans" text-right></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>{{"l_name" | translate}}</ion-label>
+                            <ion-input type="text" value="Bittoda" text-right></ion-input>
+                        </ion-item>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+            <ion-list class="form">
+                <ion-item>
+                    <ion-label>{{"c_password" | translate}}</ion-label>
+                    <ion-input type="password" value="*******" text-right></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>{{"c_password1" | translate}}</ion-label>
+                    <ion-input type="password" value="*******" text-right></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>{{"phone" | translate}}</ion-label>
+                    <ion-input type="text" value="+91 9876543210" text-right></ion-input>
+                </ion-item>
+            </ion-list>
+            <button ion-button full class="bg-theme text-white btn rounded" (click)="verification()">{{"signup" | translate}} {{"now" | translate}}</button>
+            <p text-center>{{"already_aaccount" | translate}} <strong class="text-theme" (click)="login()" text-capitalize>{{"sign_in" | translate}}</strong></p>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,35 @@
+page-notification {
+    .item {
+        border-bottom: 1px solid #dedede;
+        margin-bottom: 2px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        ion-avatar {
+            position: relative;
+        }
+        .item-inner {
+            border: none !important;
+            h2 {
+                margin: 2px 0;
+                font-size: 1.4rem;
+                margin-bottom: 4px;
+                white-space: normal;
+                line-height: 1.5;
+                .text-theme {
+                    color: $theme-color;
+                }
+            }
+            p {
+                color: $text-light;
+                font-size: 1.3rem;
+            }
+            ion-note {
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                margin-top: auto;
+            }
+        }
+    }
+}

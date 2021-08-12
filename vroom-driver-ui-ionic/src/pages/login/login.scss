@@ -1,0 +1,56 @@
+page-login {
+    .option-login {
+        font-size: 1.1rem;
+        font-weight: 500;
+        position: relative;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        &::after,
+        &::before {
+            content: '';
+            display: block;
+            width: 50px;
+            position: absolute;
+            height: 1px;
+            background: #eee;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        &::after {
+            left: auto;
+            right: 0;
+        }
+    }
+    .login {
+        position: fixed;
+        bottom: -10px;
+        width: 100%;
+        padding: 25px;
+        height: 355px
+    }
+    .logo {
+        margin: 0% auto;
+        height: calc(50vh - 70px);
+        position: relative;
+        img {
+            position: absolute;
+            width: 144px;
+            height: 144px;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    .bg-background-img {
+        background-position-y: -100px;
+    }
+    button {
+        img {
+            width: 24px;
+        }
+    }
+}

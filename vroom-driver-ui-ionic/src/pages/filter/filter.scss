@@ -1,0 +1,91 @@
+page-filter {
+    .item-radio-checked ion-label {
+        color: $text-dark !important;
+    }
+    .radio-checked {
+        border-color: $theme-color !important;
+        .radio-inner {
+            background-color: $theme-color !important;
+        }
+    }
+    .select-text,
+    .label {
+        font-weight: 500;
+        color: $text-dark !important;
+    }
+    .fix-btn {
+        height: 70px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        .full.btn {
+            width: 100%;
+            text-transform: capitalize;
+            letter-spacing: 0px;
+            font-weight: 400;
+        }
+    }
+    .space {
+        display: block;
+        position: relative;
+        height: 55px;
+    }
+    p {
+        margin: 0;
+    }
+    .card {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    ion-card-header {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        ion-item {
+            border-bottom: 1px solid #eee !important;
+            padding-left: 25px !important;
+            padding-right: 25px !important;
+            &:last-child {
+                border-bottom: 0px solid #eee !important;
+            }
+        }
+        ion-range {
+            .range-slider {
+                margin-top: 15px;
+                .range-knob {
+                    background: #fff;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+                }
+            }
+            .range-bar-active {
+                background: $theme-color !important;
+            }
+            span {
+                position: absolute;
+                top: 15px;
+                font-weight: 500;
+                &.left-text {
+                    left: 0;
+                }
+                &.right-text {
+                    right: 0;
+                }
+            }
+        }
+        .check-item {
+            display: block;
+            .item-inner {
+                float: left;
+            }
+            .checkbox {
+                float: right;
+                margin: 15px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,462 @@
+<ion-header class="bg-theme">
+    <ion-navbar>
+      <ion-title class="text-center">{{"my_ride" | translate}}
+      </ion-title>
+      <ion-icon name="md-locate" class="text-white"></ion-icon>
+
+    </ion-navbar>
+    <div padding-left padding-right>
+        <ion-segment [(ngModel)]="ride">
+            <ion-segment-button value="past">
+              {{"past" | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="today">
+              {{"today" | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="coming">
+              {{"upcoming" | translate}}
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+</ion-header>
+
+<ion-content class="bg-light">
+    <div [ngSwitch]="ride">
+        <ion-list *ngSwitchCase="'past'">
+            <ion-card>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <div class="name">
+                        <h2>David Johnson
+                        </h2>
+                        <p>Honda Cvic | White</p>
+                    </div>
+                    <div class="more">
+                        <h2 class="text-theme">$ 120
+                            <ion-icon name="md-more"></ion-icon>
+                        </h2>
+                    </div>
+                </ion-item>
+                <ion-card-content>
+                    <div class="ride-detail">
+                        <p>
+                            <span class="icon-location bg-theme"></span>Washington sq.park New York</p>
+                        <p>
+                            <span class="icon-location bg-yellow"></span>Harison, east sq.park New York</p>
+                    </div>
+                    <ion-row>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>{{"today" | translate}}: 12:15</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>2 {{"seats" | translate}}</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col col-4 text-end style="max-width: 100px;">
+                            <button class="btn bg-yellow rounded full text-white" (click)="raterider()" style="width: 100%;">{{"rate_now" | translate}}</button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+
+            <!-- repilica -->
+            <ion-card>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <div class="name">
+                        <h2>David Johnson
+                        </h2>
+                        <p>Honda Cvic | White</p>
+                    </div>
+                    <div class="more">
+                        <h2 class="text-theme">$ 120
+                            <ion-icon name="md-more"></ion-icon>
+                        </h2>
+                    </div>
+                </ion-item>
+                <ion-card-content>
+                    <div class="ride-detail">
+                        <p>
+                            <span class="icon-location bg-theme"></span><span class="time">12:00 am</span>Washington sq.park New York</p>
+                        <p>
+                            <span class="icon-location bg-yellow"></span><span class="time">12:50 am</span>Harison, east sq.park New York</p>
+                    </div>
+                    <ion-row>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>{{"today" | translate}}: 12:15</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>2 {{"seats" | translate}}</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col col-4 class="detail-text" text-end style="max-width: 100px;">
+                            <div text-start>{{"rated" | translate}}
+                                <div style="margin-top: 5px;">
+                                    <ion-icon name="ios-star" class="text-yellow"></ion-icon>
+                                    <ion-icon name="ios-star" class="text-yellow"></ion-icon>
+                                    <ion-icon name="ios-star" class="text-yellow"></ion-icon>
+                                    <ion-icon name="ios-star" class="text-yellow"></ion-icon>
+                                    <ion-icon name="ios-star" class="text-yellow"></ion-icon>
+                                </div>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+            <ion-card>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <div class="name">
+                        <h2>David Johnson
+                        </h2>
+                        <p>Honda Cvic | White</p>
+                    </div>
+                    <div class="more">
+                        <h2 class="text-theme">$ 120
+                            <ion-icon name="md-more"></ion-icon>
+                        </h2>
+                    </div>
+                </ion-item>
+                <ion-card-content>
+                    <div class="ride-detail">
+                        <p>
+                            <span class="icon-location bg-theme"></span><span class="time">12:00 am</span>Washington sq.park New York</p>
+                        <p>
+                            <span class="icon-location bg-yellow"></span><span class="time">12:50 am</span>Harison, east sq.park New York</p>
+                    </div>
+                    <ion-row>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>{{"today" | translate}}: 12:15</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>2 {{"seats" | translate}}</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col col-4 class="detail-text" text-end style="max-width: 100px;">
+                            <div text-start>{{"canceled_ride" | translate}}
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'today'">
+            <ion-card>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <div class="name">
+                        <h2>David Johnson
+                        </h2>
+                        <p>Honda Cvic | White</p>
+                    </div>
+                    <div class="more">
+                        <h2 class="text-theme">$ 120
+                            <ion-icon name="md-more"></ion-icon>
+                        </h2>
+                    </div>
+                </ion-item>
+                <ion-card-content>
+                    <div class="ride-detail">
+                        <p>
+                            <span class="icon-location bg-theme"></span>Washington sq.park New York</p>
+                        <p>
+                            <span class="icon-location bg-yellow"></span>Harison, east sq.park New York</p>
+                    </div>
+                    <ion-row>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>{{"today" | translate}}: 12:15</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>2 {{"seats" | translate}}</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col col-5>
+                            <button class="btn bg-theme rounded full text-white" (click)="ridetoday()">{{"pickup" | translate}}</button>
+                            <button class="btn bg-yellow rounded full text-white"><ion-icon name="ios-call" class="text-white"></ion-icon></button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+
+            <!-- repilica -->
+            <ion-card>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <div class="name">
+                        <h2>David Johnson
+                        </h2>
+                        <p>Honda Cvic | White</p>
+                    </div>
+                    <div class="more">
+                        <h2 class="text-theme">$ 120
+                            <ion-icon name="md-more"></ion-icon>
+                        </h2>
+                    </div>
+                </ion-item>
+                <ion-card-content>
+                    <div class="ride-detail">
+                        <p>
+                            <span class="icon-location bg-theme"></span><span class="time">12:00 am</span>Washington sq.park New York</p>
+                        <p>
+                            <span class="icon-location bg-yellow"></span><span class="time">12:50 am</span>Harison, east sq.park New York</p>
+                    </div>
+                    <ion-row>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>{{"today" | translate}}: 12:15</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>2 {{"seats" | translate}}</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col col-5>
+                            <button class="btn bg-theme rounded full text-white" (click)="ridetoday()">{{"pickup" | translate}}</button>
+                            <button class="btn bg-yellow rounded full text-white"><ion-icon name="ios-call" class="text-white"></ion-icon></button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+            <ion-card>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <div class="name">
+                        <h2>David Johnson
+                        </h2>
+                        <p>Honda Cvic | White</p>
+                    </div>
+                    <div class="more">
+                        <h2 class="text-theme">$ 120
+                            <ion-icon name="md-more"></ion-icon>
+                        </h2>
+                    </div>
+                </ion-item>
+                <ion-card-content>
+                    <div class="ride-detail">
+                        <p>
+                            <span class="icon-location bg-theme"></span><span class="time">12:00 am</span>Washington sq.park New York</p>
+                        <p>
+                            <span class="icon-location bg-yellow"></span><span class="time">12:50 am</span>Harison, east sq.park New York</p>
+                    </div>
+                    <ion-row>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>{{"today" | translate}}: 12:15</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>2 {{"seats" | translate}}</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col col-5>
+                            <button class="btn bg-theme rounded full text-white" (click)="ridetoday()">{{"pickup" | translate}}</button>
+                            <button class="btn bg-yellow rounded full text-white"><ion-icon name="ios-call" class="text-white"></ion-icon></button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+            <ion-card>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <div class="name">
+                        <h2>David Johnson
+
+                        </h2>
+                        <p>Honda Cvic | White</p>
+                    </div>
+                    <div class="more">
+                        <h2 class="text-theme">$ 120
+                            <ion-icon name="md-more"></ion-icon>
+                        </h2>
+                        <p>2 {{"seats" | translate}}</p>
+                    </div>
+                </ion-item>
+                <ion-card-content>
+                    <div class="ride-detail">
+                        <p>
+                            <span class="icon-location bg-theme"></span><span class="time">12:00 am</span>Washington sq.park New York</p>
+                        <p>
+                            <span class="icon-location bg-yellow"></span><span class="time">12:50 am</span>Harison, east sq.park New York</p>
+                    </div>
+                    <ion-row>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>{{"today" | translate}}: 12:15</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>2 {{"seats" | translate}}</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col col-5>
+                            <button class="btn bg-theme rounded full text-white" (click)="chatting()">{{"pickup" | translate}}</button>
+                            <button class="btn bg-yellow rounded full text-white"><ion-icon name="ios-call" class="text-white"></ion-icon></button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+        </ion-list>
+        <!-- <ion-list *ngSwitchCase="'coming'">
+            <p class="text-light">25<sup>th</sup> Feb 2017 | Sunday<span float-end>2 {{"passangers" | translate}}</span></p>
+            <ion-card>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <div class="name">
+                        <h2>David Johnson
+                        </h2>
+                        <p>Honda Cvic | White</p>
+                    </div>
+                    <div class="more">
+                        <h2 class="text-theme">$ 120
+                            <ion-icon name="md-more"></ion-icon>
+                        </h2>
+                    </div>
+                </ion-item>
+                <ion-card-content>
+                    <div class="ride-detail">
+                        <p>
+                            <span class="icon-location bg-theme"></span>Washington sq.park New York</p>
+                        <p>
+                            <span class="icon-location bg-yellow"></span>Harison, east sq.park New York</p>
+                    </div>
+                    <ion-row>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>{{"today" | translate}}: 12:15</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>2 {{"seats" | translate}}</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col col-5>
+                            <button class="btn bg-white rounded full text-theme" (click)="chatting()">{{"message" | translate}}</button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card> -->
+
+            <!-- repilica -->
+            <!-- <ion-card>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <div class="name">
+                        <h2>David Johnson
+                        </h2>
+                        <p>Honda Cvic | White</p>
+                    </div>
+                    <div class="more">
+                        <h2 class="text-theme">$ 120
+                            <ion-icon name="md-more"></ion-icon>
+                        </h2>
+                    </div>
+                </ion-item>
+                <ion-card-content>
+                    <div class="ride-detail">
+                        <p>
+                            <span class="icon-location bg-theme"></span><span class="time">12:00 am</span>Washington sq.park New York</p>
+                        <p>
+                            <span class="icon-location bg-yellow"></span><span class="time">12:50 am</span>Harison, east sq.park New York</p>
+                    </div>
+                    <ion-row>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>{{"today" | translate}}: 12:15</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>2 {{"seats" | translate}}</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col col-5>
+                            <button class="btn bg-white rounded full text-theme" (click)="chatting()">{{"message" | translate}}</button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+            <p class="text-light">25<sup>th</sup> Feb 2017 | Sunday<span float-end>2 {{"passangers" | translate}}</span></p>
+            <ion-card>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <div class="name">
+                        <h2>David Johnson
+                        </h2>
+                        <p>Honda Cvic | White</p>
+                    </div>
+                    <div class="more">
+                        <h2 class="text-theme">$ 120
+                            <ion-icon name="md-more"></ion-icon>
+                        </h2>
+                    </div>
+                </ion-item>
+                <ion-card-content>
+                    <div class="ride-detail">
+                        <p>
+                            <span class="icon-location bg-theme"></span><span class="time">12:00 am</span>Washington sq.park New York</p>
+                        <p>
+                            <span class="icon-location bg-yellow"></span><span class="time">12:50 am</span>Harison, east sq.park New York</p>
+                    </div>
+                    <ion-row>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>{{"today" | translate}}: 12:15</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col class="detail-text">
+                            <div text-start>
+                                <h2>2 {{"seats" | translate}}</h2>
+                            </div>
+                        </ion-col>
+                        <ion-col col-5>
+                            <button class="btn bg-white rounded full text-theme" (click)="chatting()">{{"message" | translate}}</button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+        </ion-list> -->
+    </div>
+</ion-content>
+<div *ngIf="config.demoMode" class="buy-this-app-class">
+	<button ion-button class="button-size" (click)="buyThisApp()" round>
+		<ion-icon name="md-cart" class="text-white"></ion-icon> &nbsp;
+		{{'buy_this_app' | translate}}
+	</button>
+</div>

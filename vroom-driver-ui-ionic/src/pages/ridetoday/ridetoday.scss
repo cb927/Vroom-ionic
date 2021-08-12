@@ -1,0 +1,41 @@
+page-ridetoday {
+    .map {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0
+    }
+    .user {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        &.u1 {
+            top: 9%;
+            left: 77%;
+        }
+        &.u2 {
+            top: 20%;
+            left: 65%;
+        }
+        &.u3 {
+            top: 30%;
+            left: 50%;
+        }
+    }
+    .dot {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        &.drop {
+            top: 5%;
+            left: 90%;
+        }
+        &.pickup {
+            top: 46%;
+            left: 40%;
+        }
+    }
+}

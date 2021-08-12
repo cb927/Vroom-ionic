@@ -1,0 +1,140 @@
+<ion-header class="bg-theme">
+    <ion-navbar>
+        <ion-title>{{"my_profile" | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <ion-item style="position: relative;z-index: 2;">
+        <ion-avatar item-start>
+            <img src="assets/imgs/man3.png">
+        </ion-avatar>
+        <div class="name">
+            <h2>David Johnson
+            </h2>
+            <p>{{"edit" | translate}} {{"profile" | translate}}</p>
+        </div>
+        <div class="more">
+            <h2>
+                <ion-icon name="ios-star"></ion-icon>
+                <ion-icon name="ios-star"></ion-icon>
+                <ion-icon name="ios-star"></ion-icon>
+                <ion-icon name="ios-star"></ion-icon>
+                <ion-icon name="ios-star"></ion-icon>
+            </h2>
+            <p>(53 {{"reviews" | translate}})</p>
+        </div>
+    </ion-item>
+    <div class="tabs bg-white">
+        <ion-segment [(ngModel)]="myprofile">
+            <ion-segment-button value="about">
+              {{"about" | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="reviews">
+                {{"reviews" | translate}}
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+    <div [ngSwitch]="myprofile">
+        <ion-list *ngSwitchCase="'about'">
+            <div class="bg-white" padding>
+                <ion-list no-lines class="form-list">
+                    <ion-item>
+                        <ion-label floating>{{"name" | translate}} </ion-label>
+                        <ion-input type="text" value="Johan Bitoda" readonly></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>{{"phone" | translate}}</ion-label>
+                        <ion-input type="text" value="+91 964 148 6000" readonly></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>{{"email" | translate}}</ion-label>
+                        <ion-input type="text" value="johanbittoda@email.com" readonly></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>{{"profession" | translate}}</ion-label>
+                        <ion-input type="text" value="Senior Architechat Alex Designs." readonly></ion-input>
+                    </ion-item>
+                </ion-list>
+            </div>
+            <div padding-top padding-left padding-right text-center>
+                <p>
+                    <button class="btn text-theme rounded bg-white" style="width: 100%">{{"chnge_password" | translate}}</button>
+                </p>
+
+            </div>
+        </ion-list>
+        <ion-list *ngSwitchCase="reviews">
+            <div class="bg-white" padding style="margin-bottom: 4px;">
+                <div class="rating-box">
+                    <p>
+                        <span class="text-1">5<ion-icon name="md-star"></ion-icon></span>
+                        <span class="rate-bar"><span class="bg-theme" style="width: 100%"></span></span>
+                        <span class="text-2">100</span>
+                    </p>
+                    <p>
+                        <span class="text-1">4<ion-icon name="md-star"></ion-icon></span>
+                        <span class="rate-bar"><span class="bg-theme" style="width: 90%"></span></span>
+                        <span class="text-2">90</span></p>
+                    <p>
+                        <span class="text-1">3<ion-icon name="md-star"></ion-icon></span>
+                        <span class="rate-bar"><span class="bg-theme" style="width: 70%"></span></span>
+                        <span class="text-2">60</span>
+                    </p>
+                    <p>
+                        <span class="text-1">2<ion-icon name="md-star"></ion-icon></span>
+                        <span class="rate-bar"><span class="bg-theme" style="width: 50%"></span></span>
+                        <span class="text-2">40</span>
+                    </p>
+                    <p>
+                        <span class="text-1">1<ion-icon name="md-star"></ion-icon></span>
+                        <span class="rate-bar"><span class="bg-theme" style="width: 20%"></span></span>
+                        <span class="text-2">20</span>
+                    </p>
+                </div>
+            </div>
+            <ion-card class="review">
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <h2>Buzz Lightyear</h2>
+                    <p>
+                        <ion-icon name="ios-star" class="text-yellow"></ion-icon>
+                        <ion-icon name="ios-star" class="text-yellow"></ion-icon>
+                        <ion-icon name="ios-star" class="text-yellow"></ion-icon>
+                        <ion-icon name="ios-star"></ion-icon>
+                        <ion-icon name="ios-star"></ion-icon>
+                    </p>
+                    <ion-note item-end>15 April 2017</ion-note>
+                </ion-item>
+                <ion-card-content>
+                    <div class="detail">
+                        <p>Badges are small components that typically communicate a numerical value to the user. They are typically used within an item.</p>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+            <ion-card class="review">
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/face-1.jpg">
+                    </ion-avatar>
+                    <h2>Buzz Lightyear</h2>
+                    <p>
+                        <ion-icon name="ios-star" class="text-yellow"></ion-icon>
+                        <ion-icon name="ios-star" class="text-yellow"></ion-icon>
+                        <ion-icon name="ios-star" class="text-yellow"></ion-icon>
+                        <ion-icon name="ios-star"></ion-icon>
+                        <ion-icon name="ios-star"></ion-icon>
+                    </p>
+                    <ion-note item-end>15 April 2017</ion-note>
+                </ion-item>
+                <ion-card-content>
+                    <div class="detail">
+                        <p>Badges are small components that typically communicate a numerical value to the user. They are typically used within an item.</p>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+        </ion-list>
+    </div>
+</ion-content>
